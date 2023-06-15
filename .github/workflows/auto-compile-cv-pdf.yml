@@ -22,5 +22,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: "main.pdf"
-          tags: true
-          draft: true
