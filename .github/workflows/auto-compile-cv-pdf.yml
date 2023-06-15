@@ -19,6 +19,10 @@ jobs:
           root_file: main.tex
       - name: rename the .pdf file
         run: mv main.pdf cv.pdf
+      - name: Convert to Word Docx format
+        uses: docker://pandoc/core:3.1.1
+        with:
+          args: -s main.tex --bibliography ./bib/bibliography.bib --csl=ieee.csl --citeproc -o cv.docx
       - name: Add the pdf to Github Release
         uses: svenstaro/upload-release-action@2.6.1
         with:
