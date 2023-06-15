@@ -16,3 +16,11 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+      - name: Add the pdf to Github Release
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "main.pdf"
+          tags: true
+          draft: true
