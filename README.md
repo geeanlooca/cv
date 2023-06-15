@@ -1,5 +1,5 @@
 # cv
-My personal curriculum vitae. Get the lasted version [here](https://github.com/geeanlooca/cv/releases/latest/download/cv.pdf) .
+My personal curriculum vitae. Get the latest [pdf version](https://github.com/geeanlooca/cv/releases/latest/download/cv.pdf) or [Word format](https://github.com/geeanlooca/cv/releases/latest/download/cv.docx).
 
 ## How to set up the repository
 Just clone the repository and the submodules:
@@ -16,4 +16,10 @@ pdftex main.tex
 biber main
 pdftex main.tex
 pdftex main.tex
+```
+
+## How to generate the Word document
+This requires `pandoc` (only tested on versions `3.1.1` and `3.1.3`). 
+```
+pandoc -s main.tex --bibliography .\bib\bibliography.bib --csl=ieee.csl --citeproc  -o cv.docx
 ```
