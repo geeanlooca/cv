@@ -12,11 +12,6 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: PDF
-          path: main.pdf
       - name: Add the pdf to Github Release
         uses: xresloader/upload-to-github-release@v1
         env:
