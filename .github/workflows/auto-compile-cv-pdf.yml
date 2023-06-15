@@ -2,7 +2,7 @@ name: Build the .pdf document from LaTeX file
 on: 
   push:
     branches:
-      - main
+      - m
 
 jobs:
   build_latex:
@@ -23,7 +23,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: cv.pdf
           asset_name: cv.pdf
-          tag: Updated CV
+          tag: UpdatedCV
           overwrite: true
           body: "This is my release text"
 
