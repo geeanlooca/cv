@@ -1,5 +1,5 @@
 # cv
-My personal curriculum vitae
+My personal curriculum vitae. Get the lasted version [here](https://github.com/geeanlooca/cv/releases/latest) .
 
 ## How to generate the pdf
 A LaTeX distribution is required.
