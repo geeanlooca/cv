@@ -8,9 +8,12 @@ git clone --recurse-submodules git://github.com/geeanlooca/cv.git
 ```
 
 ## How to generate the pdf
-A LaTeX distribution is required.
+A LaTeX distribution providing `pdflatex` is needed, along with `biblatex` and `biber`.
 Issue the following command
 
 ```
+pdftex main.tex
+biber main
+pdftex main.tex
 pdftex main.tex
 ```
