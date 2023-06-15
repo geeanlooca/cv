@@ -12,9 +12,15 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+      - name: rename the .pdf file
+        run: mv main.pdf cv.pdf
       - name: Add the pdf to Github Release
-        uses: xresloader/upload-to-github-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: svenstaro/upload-release-action@2.6.1
         with:
-          file: "main.pdf"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: cv.pdf
+          asset_name: cv
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my release text"
+
