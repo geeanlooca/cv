@@ -1,5 +1,8 @@
 name: Build the .pdf document from LaTeX file
-on: [push]
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   build_latex:
@@ -19,8 +22,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: cv.pdf
-          asset_name: cv
-          tag: ${{ github.ref }}
+          asset_name: cv.pdf
+          tag: Updated CV
           overwrite: true
           body: "This is my release text"
 
