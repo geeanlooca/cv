@@ -2,7 +2,7 @@ name: Build the .pdf document from LaTeX file
 on: 
   push:
     branches:
-      - m
+      - main
 
 jobs:
   build_latex:
