@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{times}
+\usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
 
 % Personal Information
 \newcommand{\fullname}{Your Name}
@@ -8,6 +10,9 @@
 \newcommand{\website}{www.yourwebsite.com}
 \newcommand{\linkedin}{linkedin.com/in/yourprofile}
 \newcommand{\github}{github.com/yourusername}
+
+
+\addbibresource{bib/bibliography.bib}
 
 \begin{document}
 
@@ -57,8 +62,10 @@ Brief description of the project and your role.
 \end{itemize}
 
 % References
-\section*{References}
-Available upon request.
+
+\section*{Publications}
+\nocite{*}
+\printbibliography[heading=none]
 
 \end{document}
 
